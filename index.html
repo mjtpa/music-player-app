@@ -2,48 +2,100 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>Music Player App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player App</title>
   <style>
+    /* خلفية عامة */
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
-      text-align: center;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
+
+    /* الحاوية المركزية */
     .container {
+      text-align: center;
       padding: 40px 20px;
+      background: rgba(30, 41, 59, 0.9);
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      max-width: 400px;
+      width: 90%;
     }
-    img {
-      width: 200px;
+
+    /* صورة اللوجو */
+    .logo {
+      width: 180px;
       border-radius: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
+
+    /* العنوان */
+    h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #22c55e;
+    }
+
+    /* الوصف */
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #cbd5e1;
+      margin-bottom: 30px;
+    }
+
+    /* زر التحميل */
     .btn {
       display: inline-block;
-      padding: 15px 30px;
+      padding: 15px 35px;
       background: #22c55e;
-      color: white;
+      color: #fff;
       text-decoration: none;
-      border-radius: 10px;
       font-size: 18px;
-      margin-top: 20px;
+      font-weight: bold;
+      border-radius: 12px;
+      transition: 0.3s;
+      box-shadow: 0 5px 15px rgba(34,197,94,0.4);
     }
+
     .btn:hover {
       background: #16a34a;
+      box-shadow: 0 8px 20px rgba(22,163,74,0.5);
+    }
+
+    /* Responsive */
+    @media(max-width: 500px) {
+      h1 { font-size: 24px; }
+      p { font-size: 14px; }
+      .btn { font-size: 16px; padding: 12px 25px; }
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <img src="logo.png" alt="App Logo">
+    <!-- ضع هنا صورة لوجو التطبيق بنفس اسم الملف logo.png -->
+    <img src="logo.png" alt="Music Player Logo" class="logo">
+    
     <h1>🎵 Music Player</h1>
-    <p>تطبيق موسيقى أنيق وسريع يدعم تشغيل جميع الصيغ بجودة عالية.</p>
-
-    <a class="btn" href="https://drive.google.com/your-apk-link">
-      تحميل التطبيق
+    
+    <p>
+      تطبيق مشغّل موسيقى عصري وسريع، يدعم تشغيل جميع صيغ الصوت بجودة عالية، ويتيح لك الاستمتاع بأغانيك المفضلة بسهولة.
+    </p>
+    
+    <!-- زر التحميل مع الرابط الثابت -->
+    <a class="btn"
+       href="https://github.com/mjtpa/music-player-app/releases/latest/download/app-debug.apk"
+       download
+       target="_blank">
+       تحميل التطبيق
     </a>
   </div>
 
